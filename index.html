@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>גולף</title>
+    <script src="logic.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Antic' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css"/>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
+    <link rel="shortcut icon" type="image/x-icon"
+          href="https://www.golfco.co.il/pub/media/favicon/websites/1/favicongac_2.jpg">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Tocca.js/0.1.1/Tocca.min.js"></script>
+</head>
+<body class="container">
+<main>
+    <!--Title section-->
+    <span class="lookOfMonthText">Look of the month</span>
+    <h1 class="pageTitle"> MIA סט מצעי כותנה סאטן מודפסים </h1>
+    <span id="itemPrice">
+        <span>669.00</span>
+        <span>₪</span>
+        <span>-</span>
+        <span>449.00</span>
+        <span>₪</span>
+    </span>
+
+    <!--Size list-->
+    <ul class="sizeList">
+        <li id="size1" onclick="changeItemSize('size1','599.00')">
+            <span>סט זוגי 200×160</span>
+            <span>559.00 ₪</span>
+        </li>
+        <li id="size2" onclick="changeItemSize('size2','629.00')">
+            <span>סט זוגי 200×180</span>
+            <span>629.00 ₪</span>
+        </li>
+        <li id="size3" onclick="changeItemSize('size3','639.00')">
+            <span>סט זוגי 200×200</span>
+            <span>639.00 ₪</span>
+        </li>
+        <li class="disabledItem" id="size4">
+            <span>סט זוגי 200×90</span>
+            <span>449.00 ₪</span>
+        </li>
+        <li class="disabledItem" id="size5">
+            <span>סט זוגי 200×160</span>
+            <span>669.00 ₪</span>
+        </li>
+        <li id="size6" onclick="changeItemSize('size6','469.00')">
+            <span>סט זוגי 200×120</span>
+            <span>469.00 ₪</span>
+        </li>
+    </ul>
+
+    <!--Amount Buttons-->
+    <div class="amountButtonWrapper">
+        <button onclick="decrementAmount()"> -</button>
+        <span id="amount"> 1 </span>
+        <button onclick="incrementAmount()"> +</button>
+    </div>
+
+    <!--Add to cart-->
+    <button class="adToCartButton">הוספה לסל</button>
+    <span class="shippingDetails">בקנייה מעל 249 ש"ח - משלוח חינם (עד 5 ימי עסקים)</span>
+
+    <!--Details section-->
+    <div class="detailsButtonWrapper">
+        <button class="isSelected">על הפריט</button>
+        <button>משלוחים והחזרות</button>
+    </div>
+    <div>
+        <p class="itemDescription">סט מצעי כותנה איכותיים ונעימים באריגת סאטן יוקרתית.<br>
+            הסאטן מתאפיין בברק הייחודי שלו ובמגע הנעים על הגוף.
+        </p>
+        <span class="itemDescriptionLabel">הרכב החומר:</span>
+        <p class="itemDescriptionText">כותנה סאטן 100%</p>
+        <span class="itemDescriptionLabel">:מידות</span>
+        <p>סט יחיד: 90×200 , ציפית: 50×70, סדין 90×200×28 , ציפה:150×200</p>
+        <p>סט מיטה וחצי: 120×200 , ציפית: 50×70, סדין 120×200×28 , ציפה:150×200</p>
+        <p>סט זוגי: 160×200 , שתי ציפיות: 50×70, סדין 160×200×30 , ציפה:220×200</p>
+        <p>סט זוגי: 180×200 , שתי ציפיות: 50×70, סדין 180×200×30 , ציפה:220×200</p>
+        <p>סט זוגי: 200×200 , שתי ציפיות: 50×70, סדין 200×200×30 , ציפה:220×</p>
+        <p>סט זוגי כפול: 160×200 , שתי ציפיות: 50×70, סדין 160×200×30 , שתי ציפות:150×200</p>
+        <span class="itemDescriptionLabel">צפיפות:</span>
+        <p class="itemDescriptionText">חוטים לאינץ 220</p>
+        <span class="itemDescriptionLabel">הוראות טיפול:</span>
+        <p>כביסה עם גוון צבע דומה</p>
+        <p>כביסה בטמפ' של עד 40 מעלות</p>
+        <p>כביסה ללא חומרי הלבנה</p>
+        <p>ניתן לגהץ בחום נמוך</p>
+        <p>אין לבצע ניקוי יבש</p>
+        <span class="itemDescriptionLabel">מספר דגם:</span>
+        <p class="itemDescriptionText">86680059900</p>
+        <p>ארץ ייצור: טורקיה</p>
+        <p>
+            המוצרים המוצעים באתר מיובאים ע"י/מיובאים/מיוצרים<br>
+            עבור: קבוצת גולף א.ק. בע"מ (ח.צ. 510289567), רחוב<br>
+            המלאכה 5, נתניה
+        </p>
+    </div>
+
+    <!--Details section-->
+    <div class="giftCardWrapper">
+        <div class="giftCardTextSection">
+            <span class="title">חברי מועדון קבוצת גולף?</span><br/>
+            <span class="texts">תוכלו לממש ולצבור נקודות גם באתר! </span>
+        </div>
+        <div class="imgSection">
+            <img src="./images/golfcocard_copy.webp"/>
+        </div>
+    </div>
+</main>
+
+<aside>
+    <!--Main image section-->
+    <div class="mainItemImage" id="imageSection">
+        <button class="heartIcon" onclick="handleFavoriteClick()"><i id="heartIconI" class="fa fa-heart-o"></i></button>
+        <span class="discountLabel">50% off</span>
+        <button class="shareLink"><i class="fa fa-usb iconSize"></i></button>
+        <button class="arrow rightSide" onclick="prevImage()"><i class="fa fa-angle-right"></i></button>
+        <button class="arrow leftSide" onclick="nextImage()"><i class="fa fa-angle-left"></i></button>
+        <img id="itemImage1" class="bigImage" src="./images/8668004_199_a-16305707282100664.webp">
+        <div class="dots" id="dots"></div>
+    </div>
+    <div class="itemImages">
+        <img id="itemImage2" class="smallImage" src="./images/8668004_199_b-16305707282213724.webp">
+        <img id="itemImage3" class="smallImage" src="./images/8668004_199_c-16305707282561260.webp">
+        <br>
+        <img id="itemImage4" class="bigImage" src="./images/8668004_199_d-16305707282709895.webp">
+        <br>
+        <img id="itemImage5" class="smallImage" src="./images/8668004_199_e-16305707283648619.jpg">
+        <img id="itemImage6" class="smallImage" src="./images/8668004_199_f-16305707284183686.jpg">
+    </div>
+</aside>
+</body>
+</html>

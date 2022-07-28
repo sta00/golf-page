@@ -1,0 +1,281 @@
+:root {
+    --border-color: #c8b4a9;
+    --grey: #494949;
+}
+
+body {
+    margin: 30px;
+    direction: rtl;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    column-gap: 150px;
+    font-family: 'AdobeCaslon', 'SimplerPro', Arial, sans-serif;
+    color: var(--grey)
+}
+
+main {
+    max-width: 350px;
+}
+
+/*remove default button style*/
+button {
+    all: unset;
+}
+
+/*Title section*/
+.lookOfMonthText {
+    display: inline-block;
+    font-size: 18px;
+    margin: 20px 0 10px;
+}
+
+.pageTitle {
+    direction: ltr;
+    font-size: 22px;
+}
+
+/*Size lite section*/
+.sizeList {
+    all: unset;
+    display: block;
+    margin-top: 30px;
+}
+
+.sizeList li {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    list-style-type: none;
+    margin: 0;
+    border: 1px solid var(--border-color);
+}
+
+.sizeList li:not(:last-child) {
+    border-bottom: unset;
+}
+
+.sizeList .disabledItem {
+    color: #d2d2d2;
+    text-decoration: line-through;
+}
+
+/*Amount button*/
+.amountButtonWrapper {
+    border-radius: 15px;
+    border: 1px solid var(--border-color);
+    width: fit-content;
+    padding: 5px 15px;
+    margin: 40px auto;
+}
+
+.amountButtonWrapper span {
+    margin: 0 5px;
+}
+
+/*Add to car button*/
+.adToCartButton {
+    display: block;
+    width: 100%;
+    height: 60px;
+    background: var(--grey);
+    color: white;
+    font-size: 20px;
+}
+
+.adToCartButton:hover {
+    transition: 0.2s;
+    background: white;
+    color: var(--grey);
+    border: 2px solid var(--grey);
+    padding-top:unset; padding-bottom:unset;
+}
+
+.shippingDetails {
+    margin-top: 10px;
+    font-size: 14px;
+    display: inline-block;
+}
+
+.detailsButtonWrapper {
+    display: flex;
+    margin-top: 60px;
+}
+
+.detailsButtonWrapper button {
+    width: 100%;
+    padding: 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.detailsButtonWrapper .isSelected {
+    border-bottom: 3px solid var(--border-color);
+}
+
+.itemDescription {
+    margin: 40px 0 20px;
+}
+
+.itemDescriptionLabel {
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.itemDescriptionText {
+    margin-top: 5px;
+}
+
+.giftCardWrapper {
+    background: #fafafa;
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    padding: 5px 0;
+    text-align: right;
+    font-size: 14px;
+}
+
+.giftCardTextSection {
+    flex-basis: 60%;
+}
+
+.giftCardTextSection .title {
+    font-weight: 600;
+}
+
+.giftCardWrapper .imgSection {
+    flex-basis: 40%;
+}
+
+.giftCardWrapper .imgSection img {
+    width: 120px;
+}
+
+.mainItemImage {
+    position: relative;
+}
+
+.mainItemImage .heartIcon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.mainItemImage .discountLabel {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    direction: ltr;
+    background: lightgray;
+    padding: 5px 10px;
+}
+
+.mainItemImage .shareLink {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+.mainItemImage .arrow {
+    display: none;
+}
+.mainItemImage .dots{
+    display: none;
+}
+
+.bigImage {
+    width: 350px;
+    height: 350px;
+    object-fit: contain;
+    object-position: top;
+}
+
+.smallImage {
+    width: 175px;
+    height: 175px;
+    object-fit: contain;
+    object-position: left;
+
+}
+
+/*same size for all icons*/
+[class^="fa"] {
+    font-size: 24px;
+}
+
+.lightGreyBackground {
+    background: #e8e4e2;
+}
+
+.redColor {
+    color: #ae0606;
+}
+
+
+
+
+/*Mobile style*/
+@media (min-width: 320px) and (max-width: 1024px) {
+    body {
+        flex-direction: column-reverse;
+        column-gap: unset;
+        margin: unset;
+    }
+
+    main {
+        max-width: unset;
+        padding: 0 15px;
+    }
+
+    .mainItemImage .shareLink {
+        bottom: 15px;
+        left: 30px;
+        transform: unset;
+    }
+
+    .mainItemImage .discountLabel {
+        top: unset;
+        bottom: 15px;
+        left: 50%;
+        transform: translateX(-50%)
+    }
+
+    .itemImages {
+        display: none;
+    }
+
+    .bigImage {
+        width: 100%;
+        height: unset;
+    }
+
+    .mainItemImage .arrow {
+        display: block;
+        position: absolute;
+        color: black;
+    }
+
+    .mainItemImage .rightSide {
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+    }
+
+    .mainItemImage .leftSide {
+        top: 50%;
+        left: 20px;
+        transform: translateY(-50%);
+    }
+    .mainItemImage .dots{
+        display: block;
+    }
+
+    .mainItemImage .dots .d{
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+        border: 1px solid black;
+        content: "";
+    }
+}
